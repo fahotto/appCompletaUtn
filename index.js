@@ -11,7 +11,7 @@ const nodemailer = require('nodemailer');
 require('dotenv').config();
 
 //Configuramos el Puerto
-const PORT = process.env.PORT || 9000; 
+const APP_PORT = process.env.APP_PORT || 6840; 
 
 //Middelware
 app.use(express.json());
