@@ -31,7 +31,7 @@ const conexion = mysql.createConnection({
     user: process.env.MYSQL_USER,
     password: process.env.MYSQL_PASSWORD,
     database: process.env.MYSQL_DATABASE,
-    port: process.env.MYSQL_DBPORT
+    port: process.env.MYSQL_PORT
 })
 
 conexion.connect((err) =>{
@@ -184,8 +184,8 @@ app.post('/update', (req, res) => {
 })
 
 //Servidor a la escucha de las peticiones
-app.listen(PORT, ()=>{
-    console.log(`Servidor trabajando en el Puerto: ${PORT}`);
+app.listen(APP_PORT, ()=>{
+    console.log(`Servidor trabajando en el Puerto: ${APP_PORT}`);
 })
  
 
